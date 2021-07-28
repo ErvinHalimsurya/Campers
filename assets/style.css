@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap');
+
+:root {
+    --primary-color: #F1ECC3;
+    --secondary-color: #C9D8B6;
+    --third-color: #57837B;
+    --fourth-color: #515E63;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lobster','Times New Roman';
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--secondary-color);
+}
+
+.nav-bar{
+    background-color: var(--secondary-color);
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    z-index: 10000;
+
+}
+
+.nav-container{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 45px;
+    margin: 0 auto;
+    
+}
+
+#nav-menus{
+    display: flex;
+    list-style: none;
+}
+
+.nav-item{
+    display: flex;
+    font-size: 24px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.nav-links{
+    transition: all 0.5s ease;
+}
+.nav-links:hover{
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+    color: var(--fourth-color);
+}
+
+.nav-links{
+    /* font-family: 'Raleway'; */
+    color: var(--third-color);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+
+#logo{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo{
+    font-family: 'Lobster','Times New Roman';
+    color: var(--fourth-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#home-container{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 150px 200px 200px 150px;
+
+}
+
+.home-text{
+    font-size: 34px;
+    margin: 50px 30px 0px 30px;
+    
+}
+
+#home-img{
+    width: 60%;
+    max-width: 600px;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-logo{
+    font-size: 50px;
+}
+
+#tagline{
+    font-family: 'Raleway',sans-serif;
+}
+
+#about-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--third-color);
+    padding: 100px 0 50px 0;
+}
+
+#about-title-container{
+    padding: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-title{
+    font-size: 54px;
+    color: var(--primary-color);
+}
+
+#about-content-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+}
+#about-img{
+    width: 250%;
+    margin-right: 30px;
+}
+#about-text{
+    font-family: 'Raleway',sans-serif;
+    font-size: 28px;
+    align-items: center;
+    text-align: justify;
+    padding: 100px 200px 100px 150px;
+}
+
+#product-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 100px 0 50px 0;
+}
+
+#prod-title-container{
+    padding: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prod-title{
+    font-size: 54px;
+    color: var(--third-color);
+}
+
+#prod-content-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.prod-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in;
+    margin: 0 20px;
+}
+
+.prod-img{
+    max-width: 100%;
+    max-height: 200px;
+}
+.prod-title{
+    color: var(--fourth-color);
+    font-size: 24px;
+    padding: 20px;
+}
+.prod-text{
+    font-size: 20px;
+    font-family: 'Raleway';
+    text-align: justify;
+}
+
+.prod-card:hover{
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 20px;
+}
+
+#contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+#contact-title{
+    font-size: 54px;
+    color: var(--fourth-color);
+    padding: 20px;
+}
+#contact-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+.contact-card{
+    background-color: transparent;
+    width: 300px;
+    height: 360px;
+    perspective: 1000px;
+    margin: 0 50px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.contact-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+
+    
+}
+.contact-card:hover,.contact-card-inner{
+    transform: rotateY(180deg);
+}
+.contact-card-front,.contact-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.contact-card-front{
+    padding: 20px 0;
+    background-color: var(--fourth-color);
+    color: var(--primary-color);
+    transform: rotateY(180deg);
+    font-size: 110%;
+}
+
+.contact-card-back{
+    background-color: var(--third-color);
+    color: white;
+    padding: 50% 0;
+}
+.contact-img{
+    max-height: 60%;
+    border-radius: 50%;
+}
+
+.contact-bio{
+    padding: 10px 0 0 0;
+}
+
+.contact-email, .contact-city{
+    font-family: 'Raleway',sans-serif;
+    color: white;
+}
+
+.contact-name{
+    font-size: 22px;
+}
+
+#footer-container{
+    background-color: var(--fourth-color);
+    padding: 20px 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#footer-logo{
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+#copyright{
+    color: white;
+}
+
+#footer-icon-container{
+   display: flex;
+   flex-direction: row;
+}
+.footer-icon{
+    max-width: 40px;
+    margin : 0 20px;
+    transition: all 0.5s ease;
+}
+
+.footer-icon:hover{
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:1000px){
+    .nav-bar{
+        z-index: 1;
+    }
+    #home-img{
+        width: 100%;
+        max-width:600px;
+    }
+    .nav-container{
+        padding: 0;
+        position:sticky;
+    }
+    #logo{
+        padding:20px;
+        z-index: 2;
+    }
+    #home-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    #about-content-container{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    #about-text{
+        padding: 25px;
+    }
+    #about-img{
+        width: 70%;
+    }
+    
+    #prod-content-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .prod-card{
+        margin: 10px 0;
+    }
+
+    #contact-title{
+        padding: 20px 20px 20px 10px 20px;
+    }
+    #contact-content{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .contact-card{
+        margin: 10px 0;
+    }
+    #footer-container{
+        padding:20px 30px;
+    }
+
+    #nav-menus{
+        display: grid;
+        width: 100%;
+        height: 26vh;
+        position: absolute;
+        top: -500px;
+        opacity: 0;
+        background-color: var(--secondary-color);
+        transition: all 0.5s ease-in;
+        z-index: 1;
+    }
+
+    #nav-menus.activate{
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease-in;
+    }
+
+    #mobile-menus{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 20px;
+        z-index: 2;
+    }
+    .bar{
+        padding: 2px 20px;
+        background: var(--fourth-color);
+        margin: 3px 0;
+        transition: all 0.3s ease-in-out;
+    }
+    #mobile-menus.activate .bar:nth-child(2){
+        opacity : 0;
+        transition: all 0.3s ease-in;
+    }
+    #mobile-menus.activate .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+        transition: all 0.3s ease-in;
+    }
+
+    #mobile-menus.activate .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+        transition: all 0.3s ease-in;
+    }
+
+    .contact-card.activate{
+        transform: rotateY(180deg);
+    }
+}
