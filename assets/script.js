@@ -39,7 +39,7 @@ const navColor = ()=>{
     if (window.innerWidth<1000){
         homeY = 0;
         aboutY = 642;
-        prodY = 1420;
+        prodY = 1400;
         contactY = 3003;
 
     }
