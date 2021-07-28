@@ -247,8 +247,6 @@ body{
     height: 100%;
     text-align: center;
     transform-style: preserve-3d;
-
-    
 }
 .contact-card:hover,.contact-card-inner{
     transform: rotateY(180deg);
@@ -377,7 +375,7 @@ body{
         padding: 10px;
     }
     .contact-card{
-        margin: 10px 0;
+        margin: 20px 0;
     }
     #footer-container{
         padding:20px 30px;
