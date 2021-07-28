@@ -346,12 +346,7 @@ body{
         padding: 100px 20px;
         text-align: center;
     }
-    .contact-card:hover{
-        transform: rotateY(0deg);
-    }
-    .contact-card:active{
-        transform: rotateY(180deg);
-    }
+
     #about-content-container{
         flex-direction: column;
         padding: 0;
@@ -432,6 +427,15 @@ body{
     }
 
     .contact-card.activate{
+        transform: rotateY(180deg);
+    }
+}
+
+@media (hover:none) and (pointer:coarse){
+    .contact-card:hover{
+        transform: rotateY(0deg);
+    }
+    .contact-card:active{
         transform: rotateY(180deg);
     }
 }
