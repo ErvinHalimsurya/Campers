@@ -222,6 +222,7 @@ body{
     font-size: 54px;
     color: var(--fourth-color);
     padding: 20px;
+    text-align: center;
 }
 #contact-content{
     display: flex;
